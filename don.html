@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un Don - KOSUNGA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">KOSUNGA</div>
+            <ul class="menu-navigation">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="don.html">Don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banniere-don">
+        <div class="image-banniere">
+            <img src="images/recueil-cas-hero.jpg" alt="Bannière Don - KOSUNGA">
+        </div>
+        <div class="contenu-banniere">
+            <h1>Faire un Don</h1>
+            <p>Votre générosité permet à KOSUNGA de poursuivre ses actions pour la protection des femmes et enfants vulnérables.</p>
+        </div>
+    </section>
+
+    <section class="don-section">
+        <h2>Soutenez nos actions</h2>
+        <p class="intro-don">Chaque don, même le plus modeste, contribue à changer des vies. Merci pour votre soutien !</p>
+        <form class="formulaire-don">
+            <div class="groupe-formulaire">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="groupe-formulaire">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="groupe-formulaire">
+                <label for="montant">Montant du don (Fcfa)</label>
+                <input type="number" id="montant" name="montant" min="1" required>
+            </div>
+            <div class="groupe-formulaire">
+                <label for="message">Message (optionnel)</label>
+                <textarea id="message" name="message" placeholder="Un mot de soutien, une dédicace..."></textarea>
+            </div>
+            <button type="submit" class="bouton-don">Faire un don</button>
+        </form>
+        <div class="info-don">
+            <p><strong>Vous pouvez aussi soutenir l'ONG par virement ou dépôt direct :</strong></p>
+            <p>
+                <strong>Banque :</strong> Mucodec<br>
+                <strong>Numéro de compte :</strong> 12345678901<br>
+                <strong>Nom du titulaire :</strong> KOSUNGA ONG
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenu-pied">
+            <div class="section-pied">
+                <h4>KOSUNGA</h4>
+                <p>ONG de Protection des Femmes et Enfants</p>
+            </div>
+            <div class="section-pied">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Paix, Brazzaville, Congo</p>
+                <p><i class="fas fa-envelope"></i> contact@kosunga.com</p>
+                <p><i class="fas fa-phone"></i> +242 479 75 12</p>
+                <p><i class="fab fa-whatsapp"></i> +242 06 123 45 67</p>
+            </div>
+        </div>
+        <div class="bas-pied">
+            <p>&copy; 2025 KOSUNGA. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html> 

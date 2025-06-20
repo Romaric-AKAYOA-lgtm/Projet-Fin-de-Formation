@@ -1,0 +1,1326 @@
+/* Ce code définit des variables CSS personnalisées (aussi appelées "propriétés personnalisées" ou "variables
+ CSS") dans la pseudo-classe :root. :root représente l'élément racine du document (équivalent à html)
+Les variables définies dans :root sont accessibles partout dans le document*/
+:root {
+    --primary-color: #2c3e50;    /* Bleu foncé */
+    --secondary-color: #e74c3c;  /* Rouge */
+    --accent-color: #3498db;     /* Bleu clair */
+    --light-color: #ecf0f1;      /* Gris très clair */
+    --dark-color: #2c3e50;       /* Bleu foncé */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut padding et border dans la largeur/hauteur */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #333; /* Couleur du texte principal */
+}
+
+/* Header et Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée subtile */
+    position: fixed; /* Header fixe en haut de page */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* S'assure que le header reste au-dessus des autres éléments */
+}
+
+nav {
+    display: flex; /* Layout flexible */
+    justify-content: space-between; /* Espace entre logo et menu */
+    align-items: center; /* Centre verticalement */
+    padding: 16px 5%; /* 16px haut/bas, 5% gauche/droite */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px; /* 24px = 1.5rem */
+    font-weight: bold;
+    color: #e74c3c; /* Rouge pour le logo */
+}
+
+.menu-navigation {
+    display: flex; /* Menu horizontal */
+    list-style: none;
+}
+
+.menu-navigation li {
+    margin-left: 32px; /* 32px = 2rem */
+}
+
+.menu-navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Animation de couleur au survol */
+}
+
+.menu-navigation a:hover {
+    color: #e74c3c; /* Rouge au survol */
+}
+
+/* Section banniere */
+.banniere {
+    position: relative;
+    height: 100vh; /* Hauteur complète de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 16px; /* 16px = 1rem */
+    overflow: hidden; /* Cache le débordement */
+}
+
+.image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place l'image en arrière-plan */
+}
+
+/* crée un élément invisible après le contenu */ 
+.image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* Noir semi-transparent */
+}
+
+.image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Couvre tout l'espace sans déformation */
+}
+
+.contenu-banniere {
+    position: relative;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    max-width: 800px;
+}
+
+.contenu-banniere h1 {
+    font-size: 48px; /* 48px = 3rem */
+    margin-bottom: 16px; /* 16px = 1rem */
+}
+
+.contenu-banniere h1 span{
+    color: #e74c3c;
+    font-size: 60px;
+}
+
+
+.contenu-banniere p {
+    font-size: 19px; /* 19px = 1.2rem */
+    margin-bottom: 32px; /* 32px = 2rem */
+}
+
+.bouton-action {
+    display: inline-block;
+    padding: 16px 32px; /* 16px haut/bas, 32px gauche/droite */
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-action:hover {
+    background-color: #c0392b; /* Rouge plus foncé au survol */
+}
+
+/* Section À Propos */
+.apropos {
+    padding: 80px 16px; /* 80px = 5rem haut/bas, 16px gauche/droite */
+    background-color: #fff;
+}
+
+.apropos h2 {
+    text-align: center;
+    margin-bottom: 48px; /* 48px = 3rem */
+    font-size: 40px; /* 40px = 2.5rem */
+    color: #e74c3c;
+}
+
+.conteneur-apropos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px; /* 48px = 3rem */
+    align-items: center;
+}
+
+.texte-apropos h3 {
+    color: #e74c3c;
+    margin-bottom: 16px; /* 16px = 1rem */
+    font-size: 24px; /* 24px = 1.5rem */
+}
+
+.texte-apropos p {
+    margin-bottom: 24px; /* 24px = 1.5rem */
+    line-height: 1.8;
+    color: #666;
+}
+
+.texte-apropos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.texte-apropos ul li {
+    margin-bottom: 13px; /* 13px = 0.8rem */
+    position: relative;
+    padding-left: 24px; /* 24px = 1.5rem */
+    color: #666;
+}
+
+.texte-apropos ul li:before {
+    content: "•";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    font-size: 19px; /* 19px = 1.2rem */
+}
+
+.image-apropos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Section Réalisations */
+.realisations {
+    padding: 80px 16px; /* 80px = 5rem haut/bas, 16px gauche/droite */
+    background-color: #f9f9f9;
+}
+
+.realisations h2 {
+    text-align: center;
+    margin-bottom: 48px; /* 48px = 3rem */
+    font-size: 40px; /* 40px = 2.5rem */
+    color: #e74c3c;
+}
+
+.grille-realisations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px; /* 32px = 2rem */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-realisation {
+    background: #fff;
+    padding: 32px; /* 32px = 2rem */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.carte-realisation:hover {
+    transform: translateY(-5px);
+}
+
+.icone-realisation {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px; /* 24px = 1.5rem */
+}
+
+.icone-realisation i {
+    font-size: 32px; /* 32px = 2rem */
+    color: #fff;
+}
+
+.carte-realisation h3 {
+    color: #333;
+    margin-bottom: 16px; /* 16px = 1rem */
+    font-size: 21px; /* 21px = 1.3rem */
+}
+
+.carte-realisation p {
+    color: #666;
+    margin-bottom: 24px; /* 24px = 1.5rem */
+    line-height: 1.6;
+}
+
+.statistique {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #e74c3c;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px; /* 14px = 0.9rem */
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 48px 16px 16px; /* 48px haut, 16px gauche/droite, 16px bas */
+}
+
+footer .contenu-pied {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+footer .section-pied {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+footer .section-pied h4 {
+    margin-bottom: 16px; /* 16px = 1rem */
+    font-size: 19px; /* 19px = 1.2rem */
+}
+
+footer .section-pied p {
+    color: #ccc;
+    margin-bottom: 8px; /* 8px = 0.5rem */
+}
+
+footer .bas-pied {
+    text-align: center;
+    padding-top: 32px; /* 32px = 2rem */
+    border-top: 1px solid #444;
+}
+
+/* Styles pour les images des sections */
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.02); /* Agrandit légèrement l'image au survol */
+}
+
+/* Media Queries - Responsive Design */
+@media (max-width: 768px) {
+    .menu-navigation {
+        display: none; /* Cache le menu sur mobile */
+    }
+    
+    .contenu-banniere h1 {
+        font-size: 32px; /* 32px = 2rem */
+    }
+    
+    .section-image img {
+        margin: 16px 0; /* 16px = 1rem */
+    }
+    
+    /* Media Queries pour À Propos */
+    .conteneur-apropos {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    
+    .image-apropos {
+        order: -1; /* L'image apparaît en premier */
+    }
+    
+    /* Media Queries pour Réalisations */
+    .grille-realisations {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    
+    .carte-realisation {
+        margin-bottom: 16px; /* 16px = 1rem */
+    }
+}
+
+@media (max-width: 700px) {
+    footer .contenu-pied {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+    footer .section-pied {
+        min-width: unset;
+    }
+}
+
+footer, footer .section-pied, footer .section-pied h4, footer .section-pied p, footer .section-pied i {
+    color: #fff !important;
+}
+footer .section-pied i {
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* =====================
+   CSS NOS MISSIONS (nosmissions.html)
+   ===================== */
+
+.missions {
+    padding: 80px 16px;
+    background-color: #f9f9f9;
+}
+
+.missions h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 40px;
+}
+
+.grille-missions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-mission {
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.carte-mission:hover {
+    transform: translateY(-5px);
+}
+
+.image-mission {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.image-mission:hover {
+    transform: scale(1.05);
+}
+
+.carte-mission i {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 16px;
+}
+
+.carte-mission h3 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.carte-mission p {
+    margin-bottom: 24px;
+    color: #666;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton:hover {
+    background-color: #c0392b;
+}
+
+.banniere-nomission {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 16px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.banniere-nomission .image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banniere-nomission .image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.banniere-nomission .image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banniere-nomission .contenu-banniere {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.banniere-nomission .contenu-banniere h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.banniere-nomission .contenu-banniere p {
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+/* =====================
+   CSS REALISATIONS (realisations.html)
+   ===================== */
+
+.banniere-realisations {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 16px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.banniere-realisations .image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banniere-realisations .image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.banniere-realisations .image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banniere-realisations .contenu-banniere {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.banniere-realisations .contenu-banniere h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.banniere-realisations .contenu-banniere p {
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+.realisations {
+    padding: 80px 16px;
+    background-color: #fff;
+}
+
+.realisations h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    font-size: 40px;
+    color: #e74c3c;
+}
+
+.grille-realisations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-realisation {
+    background: #f9f9f9;
+    padding: 32px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.carte-realisation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+}
+
+.icone-realisation {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 16px;
+}
+
+.carte-realisation h3 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.carte-realisation p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* =====================
+   CSS DON (don.html)
+   ===================== */
+
+.banniere-don {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 16px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.banniere-don .image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.banniere-don .image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.banniere-don .image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banniere-don .contenu-banniere {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.banniere-don .contenu-banniere h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.banniere-don .contenu-banniere p {
+    font-size: 19px;
+    margin-bottom: 32px;
+}
+
+.don-section {
+    padding: 80px 16px;
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.don-section h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: #e74c3c;
+}
+
+.intro-don {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #666;
+}
+
+.formulaire-don {
+    background: #f9f9f9;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    margin-bottom: 32px;
+}
+
+.groupe-formulaire {
+    margin-bottom: 24px;
+}
+
+.groupe-formulaire label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.groupe-formulaire input,
+.groupe-formulaire textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.groupe-formulaire textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.bouton-don {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-don:hover {
+    background-color: #c0392b;
+}
+
+.info-don {
+    background: #fff3e6;
+    border-left: 5px solid #e74c3c;
+    padding: 24px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+@media (max-width: 700px) {
+    .don-section {
+        padding: 32px 4px;
+        max-width: 100%;
+    }
+    .banniere-don {
+        height: 30vh;
+    }
+    .banniere-don .contenu-banniere h1 {
+        font-size: 32px;
+    }
+}
+
+/* =====================
+   CSS MISSION 1 (mission1.html)
+   ===================== */
+
+.banniere-mission {
+    position: relative;
+    height: 50vh;
+    display: flex; /* Permet de centrer facilement le contenu*/
+    align-items: center; /* Centre verticalement les éléments enfants */
+    justify-content: center; /* Centre horizontalement les éléments enfants */
+    text-align: center; /* Centre le texte à l'intérieur des éléments */
+    color: #fff;
+    margin-top: 60px;
+    overflow: hidden; /* Cache tout contenu qui dépasse les limites */
+}
+
+.image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*z-index: -1; /* Place l'élément en arrière-plan */
+}
+/* Pseudo-élément qui crée un élément virtuel après le contenu de .image-banniere */
+.image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image couvre entièrement son conteneur */
+}
+
+.contenu-banniere {
+    position: relative;
+}
+
+.contenu-mission {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #f9f9f9;
+}
+
+.conteneur-mission {
+    max-width: 1200px;
+    margin: 0 auto; /* Centre le conteneur dans la page */
+    display: grid; /* Active CSS Grid pour la mise en page */
+    grid-template-columns: 1fr 1fr; /* Crée 2 colonnes de taille égale */
+    gap: 48px; /* 3rem */
+    align-items: center;
+}
+
+.section-texte h2 {
+    color: #e74c3c;
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+.section-texte h3 {
+    color: #333;
+    margin: 24px 0 16px;
+    font-size: 24px;
+}
+
+.section-texte p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.section-texte ul {
+    list-style-type: none; /* Supprime les puces par défaut (les points noirs) */
+    padding-left: 24px;
+}
+
+.section-texte ul li {
+    margin-bottom: 13px; /* 0.8rem */
+    position: relative;
+    padding-left: 24px;
+}
+
+.section-texte ul li:before {
+    content: "•"; /* Ajoute le caractère "•" */
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    font-size: 19px; /* 1.2rem */
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.02);
+}
+
+.processus {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #fff;
+}
+
+.processus h2 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 48px;
+    font-size: 32px;
+}
+
+.etapes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centre la grille dans la page */
+}
+
+.etape {
+    text-align: center; /* Centre tout le contenu de la carte (icône, titre, texte) */
+    padding: 32px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Animation fluide de 0.3 seconde */
+}
+
+.etape:hover {
+    transform: translateY(-20px);
+}
+
+.etape i {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 16px;
+}
+
+.etape h3 {
+    color: #333;
+    margin-bottom: 13px; /* 0.8rem */
+    font-size: 21px; /* 1.3rem */
+}
+
+.etape p {
+    color: #666;
+    font-size: 14px; /* 0.9rem */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .conteneur-mission {
+        grid-template-columns: 1fr;
+    }
+    .section-image {
+        order: -1;
+    }
+    .banniere-mission {
+        height: 40vh;
+    }
+    .banniere-mission h1 {
+        font-size: 32px; /* 2rem */
+    }
+    .banniere-mission p {
+        font-size: 16px; /* 1rem */
+    }
+    .section-image img {
+        margin: 16px 0; /* 1rem 0 */
+    }
+}
+
+/* =====================
+   CSS MISSION 2 (mission2.html)
+   ===================== */
+
+.banniere-mission {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenu-banniere {
+    position: relative;
+    z-index: 1;
+}
+
+.contenu-mission {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #f9f9f9;
+}
+
+.conteneur-mission {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px; /* 3rem */
+    align-items: center;
+}
+
+.section-texte h2 {
+    color: #e74c3c;
+    margin-bottom: 24px; /* 1.5rem */
+    font-size: 32px; /* 2rem */
+}
+
+.section-texte h3 {
+    color: #333;
+    margin: 24px 0 16px; /* 1.5rem 0 1rem */
+    font-size: 24px; /* 1.5rem */
+}
+
+.section-texte p {
+    margin-bottom: 16px; /* 1rem */
+    line-height: 1.8;
+    color: #666;
+}
+
+.section-texte ul {
+    list-style-type: none;
+    padding-left: 24px; /* 1.5rem */
+}
+
+.section-texte ul li {
+    margin-bottom: 13px; /* 0.8rem */
+    position: relative;
+    padding-left: 24px; /* 1.5rem */
+}
+
+.section-texte ul li:before {
+    content: "•";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    font-size: 19px; /* 1.2rem */
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.02);
+}
+
+.services {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 48px; /* 3rem */
+    font-size: 32px; /* 2rem */
+}
+
+.grille-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px; /* 2rem */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-service {
+    text-align: center;
+    padding: 32px; /* 2rem */
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.carte-service:hover {
+    transform: translateY(-5px);
+}
+
+.carte-service i {
+    font-size: 40px; /* 2.5rem */
+    color: #e74c3c;
+    margin-bottom: 16px; /* 1rem */
+}
+
+.carte-service h3 {
+    color: #333;
+    margin-bottom: 13px; /* 0.8rem */
+    font-size: 21px; /* 1.3rem */
+}
+
+.carte-service p {
+    color: #666;
+    font-size: 14px; /* 0.9rem */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .conteneur-mission {
+        grid-template-columns: 1fr;
+    }
+    .section-image {
+        order: -1;
+    }
+    .banniere-mission {
+        height: 40vh;
+    }
+    .banniere-mission h1 {
+        font-size: 32px; /* 2rem */
+    }
+    .banniere-mission p {
+        font-size: 16px; /* 1rem */
+    }
+    .section-image img {
+        margin: 16px 0; /* 1rem 0 */
+    }
+}
+
+/* =====================
+   CSS MISSION 3 (mission3.html)
+   ===================== */
+
+.banniere-mission {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.image-banniere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.image-banniere::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.image-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenu-banniere {
+    position: relative;
+    z-index: 1;
+}
+
+.contenu-mission {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #f9f9f9;
+}
+
+.conteneur-mission {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px; /* 3rem */
+    align-items: center;
+}
+
+.section-texte h2 {
+    color: #e74c3c;
+    margin-bottom: 24px; /* 1.5rem */
+    font-size: 32px; /* 2rem */
+}
+
+.section-texte h3 {
+    color: #333;
+    margin: 24px 0 16px; /* 1.5rem 0 1rem */
+    font-size: 24px; /* 1.5rem */
+}
+
+.section-texte p {
+    margin-bottom: 16px; /* 1rem */
+    line-height: 1.8;
+    color: #666;
+}
+
+.section-texte ul {
+    list-style-type: none;
+    padding-left: 24px; /* 1.5rem */
+}
+
+.section-texte ul li {
+    margin-bottom: 13px; /* 0.8rem */
+    position: relative;
+    padding-left: 24px; /* 1.5rem */
+}
+
+.section-texte ul li:before {
+    content: "•";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    font-size: 19px; /* 1.2rem */
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image img:hover {
+    transform: scale(1.02);
+}
+
+.programmes {
+    padding: 64px 16px; /* 4rem 1rem */
+    background-color: #fff;
+}
+
+.programmes h2 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 48px; /* 3rem */
+    font-size: 32px; /* 2rem */
+}
+
+.grille-programmes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px; /* 2rem */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carte-programme {
+    text-align: center;
+    padding: 32px; /* 2rem */
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.carte-programme:hover {
+    transform: translateY(-5px);
+}
+
+.carte-programme i {
+    font-size: 40px; /* 2.5rem */
+    color: #e74c3c;
+    margin-bottom: 16px; /* 1rem */
+}
+
+.carte-programme h3 {
+    color: #333;
+    margin-bottom: 13px; /* 0.8rem */
+    font-size: 21px; /* 1.3rem */
+}
+
+.carte-programme p {
+    color: #666;
+    font-size: 14px; /* 0.9rem */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .conteneur-mission {
+        grid-template-columns: 1fr;
+    }
+    .section-image {
+        order: -1;
+    }
+    .banniere-mission {
+        height: 40vh;
+    }
+    .banniere-mission h1 {
+        font-size: 32px; /* 2rem */
+    }
+    .banniere-mission p {
+        font-size: 16px; /* 1rem */
+    }
+    .section-image img {
+        margin: 16px 0; /* 1rem 0 */
+    }
+}

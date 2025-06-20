@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation - KOSUNGA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">KOSUNGA</div>
+            <ul class="menu-navigation">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="don.html">Don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banniere-mission">
+        <div class="image-banniere">
+            <img src="images/orientation-hero.jpg" alt="Orientation des victimes - KOSUNGA">
+        </div>
+        <div class="contenu-banniere">
+            <h1>Orientation</h1>
+            <p>Guider les victimes vers les services appropriés</p>
+        </div>
+    </section>
+
+    <section class="contenu-mission">
+        <div class="conteneur-mission">
+            <div class="section-texte">
+                <h2>Notre Mission Orientation</h2>
+                <p>L'orientation est une étape essentielle dans notre processus d'aide. Nous guidons les victimes vers les services les plus adaptés à leur situation, en assurant un suivi personnalisé et efficace.</p>
+                <h3>Nos Objectifs</h3>
+                <ul>
+                    <li>Identifier les besoins spécifiques de chaque victime</li>
+                    <li>Orienter vers les services appropriés</li>
+                    <li>Assurer un suivi continu</li>
+                    <li>Faciliter l'accès aux ressources</li>
+                </ul>
+                <h3>Notre Approche</h3>
+                <p>Notre équipe travaille en collaboration avec :</p>
+                <ul>
+                    <li>Services médicaux</li>
+                    <li>Assistance juridique</li>
+                    <li>Support psychologique</li>
+                    <li>Services sociaux</li>
+                </ul>
+            </div>
+            <div class="section-image">
+                <img src="images/orientation-hero.jpg" alt="Orientation">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenu-pied">
+            <div class="section-pied">
+                <h4>KOSUNGA</h4>
+                <p>ONG de Protection des Femmes et Enfants</p>
+            </div>
+            <div class="section-pied">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Paix, Brazzaville, Congo</p>
+                <p><i class="fas fa-envelope"></i> contact@kosunga.com</p>
+                <p><i class="fas fa-phone"></i> +242 479 75 12</p>
+                <p><i class="fab fa-whatsapp"></i> +242 06 123 45 67</p>
+            </div>
+        </div>
+        <div class="bas-pied">
+            <p>&copy; 2025 KOSUNGA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bouton pour descendre vers la section principale -->
+    <button id="scroll-down" style="position:fixed;bottom:90px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#e74c3c;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    <!-- Bouton pour remonter en haut de la page -->
+    <button id="scroll-up" style="position:fixed;bottom:30px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#2c3e50;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;display:none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        // Scroll vers la section principale (premier <section> après le header)
+        document.getElementById('scroll-down').onclick = function() {
+            var firstSection = document.querySelector('section');
+            if(firstSection) firstSection.scrollIntoView({behavior: 'smooth'});
+        };
+        // Afficher/Masquer le bouton scroll-up
+        window.addEventListener('scroll', function() {
+            document.getElementById('scroll-up').style.display = (window.scrollY > 200) ? 'block' : 'none';
+        });
+        // Scroll vers le haut
+        document.getElementById('scroll-up').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html> 

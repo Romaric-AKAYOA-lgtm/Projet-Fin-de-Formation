@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prise en Charge - KOSUNGA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .mission-content {
+            padding: 120px 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mission-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .mission-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-image-container {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .mission-hero-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .programs-section {
+            margin-bottom: 3rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .program-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .program-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .program-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .program-card ul li:before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .prise-en-charge-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">KOSUNGA</div>
+            <ul class="menu-navigation">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="don.html">Don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banniere-mission">
+        <div class="image-banniere">
+            <img src="images/prise-en-charge-hero.jpg" alt="Prise en charge des victimes - KOSUNGA">
+        </div>
+        <div class="contenu-banniere">
+            <h1>Prise en Charge</h1>
+            <p>Accompagnement complet des victimes vers un avenir meilleur</p>
+        </div>
+    </section>
+
+    <section class="contenu-mission">
+        <div class="conteneur-mission">
+            <div class="section-texte">
+                <h2>Notre Mission</h2>
+                <p>La prise en charge est au cœur de notre action. Nous offrons un accompagnement complet et personnalisé pour aider les victimes à reconstruire leur vie.</p>
+                
+                <h3>Nos Objectifs</h3>
+                <ul>
+                    <li>Assurer une prise en charge globale</li>
+                    <li>Accompagner la reconstruction</li>
+                    <li>Promouvoir l'autonomie</li>
+                    <li>Garantir un suivi à long terme</li>
+                </ul>
+
+                <h3>Notre Approche</h3>
+                <p>Notre programme de prise en charge comprend :</p>
+                <ul>
+                    <li>Accompagnement psychologique</li>
+                    <li>Formation professionnelle</li>
+                    <li>Insertion sociale</li>
+                    <li>Suivi médical</li>
+                </ul>
+            </div>
+            
+            <div class="section-image">
+                <img src="images/prise-en-charge-hero.jpg" alt="Prise en charge">
+            </div>
+        </div>
+    </section>
+
+    <section class="programmes">
+        <h2>Nos Programmes</h2>
+        <div class="grille-programmes">
+            <div class="carte-programme">
+                <i class="fas fa-heart"></i>
+                <h3>Accompagnement Psychologique</h3>
+                <p>Thérapie et soutien émotionnel</p>
+            </div>
+            <div class="carte-programme">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Formation Professionnelle</h3>
+                <p>Développement des compétences</p>
+            </div>
+            <div class="carte-programme">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Insertion Sociale</h3>
+                <p>Réintégration dans la société</p>
+            </div>
+            <div class="carte-programme">
+                <i class="fas fa-user-md"></i>
+                <h3>Suivi Médical</h3>
+                <p>Soins et suivi de santé</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenu-pied">
+            <div class="section-pied">
+                <h4>KOSUNGA</h4>
+                <p>ONG de Protection des Femmes et Enfants</p>
+            </div>
+            <div class="section-pied">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Paix, Brazzaville, Congo</p>
+                <p><i class="fas fa-envelope"></i> contact@kosunga.com</p>
+                <p><i class="fas fa-phone"></i> +242 479 75 12</p>
+                <p><i class="fab fa-whatsapp"></i> +242 06 123 45 67</p>
+            </div>
+        </div>
+        <div class="bas-pied">
+            <p>&copy; 2025 KOSUNGA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bouton pour descendre vers la section principale -->
+    <button id="scroll-down" style="position:fixed;bottom:90px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#e74c3c;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    <!-- Bouton pour remonter en haut de la page -->
+    <button id="scroll-up" style="position:fixed;bottom:30px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#2c3e50;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;display:none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        // Scroll vers la section principale (premier <section> après le header)
+        document.getElementById('scroll-down').onclick = function() {
+            var firstSection = document.querySelector('section');
+            if(firstSection) firstSection.scrollIntoView({behavior: 'smooth'});
+        };
+        // Afficher/Masquer le bouton scroll-up
+        window.addEventListener('scroll', function() {
+            document.getElementById('scroll-up').style.display = (window.scrollY > 200) ? 'block' : 'none';
+        });
+        // Scroll vers le haut
+        document.getElementById('scroll-up').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html> 

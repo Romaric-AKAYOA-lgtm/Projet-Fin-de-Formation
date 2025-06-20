@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Missions - KOSUNGA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">KOSUNGA</div>
+            <ul class="menu-navigation">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="don.html">Don</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banniere-nomission">
+        <div class="image-banniere">
+            <img src="images/recueil-cas-hero.jpg" alt="Bannière Nos Missions - KOSUNGA">
+        </div>
+        <div class="contenu-banniere">
+            <h1>Nos Missions</h1>
+            <p>Découvrez les actions de KOSUNGA pour la protection des femmes et enfants</p>
+        </div>
+    </section>
+
+    <section class="missions">
+        <h2>Nos Missions</h2>
+        <div class="grille-missions">
+            <div class="carte-mission">
+                <img src="images/recueil-cas.jpg" alt="Recueil des cas" class="image-mission">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Recueil des Cas</h3>
+                <p>Recueillir les cas de violence basées sur le genre</p>
+                <a href="mission1.html" class="bouton">Voir plus</a>
+            </div>
+            <div class="carte-mission">
+                <img src="images/orientation.jpg" alt="Orientation" class="image-mission">
+                <i class="fas fa-directions"></i>
+                <h3>Orientation</h3>
+                <p>Orienter les victimes vers les services appropriés</p>
+                <a href="mission2.html" class="bouton">Voir plus</a>
+            </div>
+            <div class="carte-mission">
+                <img src="images/prise-en-charge.jpg" alt="Prise en charge" class="image-mission">
+                <i class="fas fa-users"></i>
+                <h3>Prise en Charge</h3>
+                <p>Prendre en charge des femmes et enfants orientés</p>
+                <a href="mission3.html" class="bouton">Voir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contenu-pied">
+            <div class="section-pied">
+                <h4>KOSUNGA</h4>
+                <p>ONG de Protection des Femmes et Enfants</p>
+            </div>
+            <div class="section-pied">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Avenue de la Paix, Brazzaville, Congo</p>
+                <p><i class="fas fa-envelope"></i> contact@kosunga.com</p>
+                <p><i class="fas fa-phone"></i> +242 479 75 12</p>
+                <p><i class="fab fa-whatsapp"></i> +242 06 123 45 67</p>
+            </div>
+        </div>
+        <div class="bas-pied">
+            <p>&copy; 2025 KOSUNGA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bouton pour descendre vers la section Nos Missions -->
+    <button id="scroll-down" style="position:fixed;bottom:90px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#e74c3c;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+    <!-- Bouton pour remonter en haut de la page -->
+    <button id="scroll-up" style="position:fixed;bottom:30px;right:30px;z-index:1001;padding:12px 18px;border-radius:50%;background:#2c3e50;color:#fff;border:none;box-shadow:0 2px 6px rgba(0,0,0,0.2);cursor:pointer;font-size:22px;display:none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        // Scroll vers la section Nos Missions
+        document.getElementById('scroll-down').onclick = function() {
+            document.querySelector('.missions').scrollIntoView({behavior: 'smooth'});
+        };
+        // Afficher/Masquer le bouton scroll-up
+        window.addEventListener('scroll', function() {
+            document.getElementById('scroll-up').style.display = (window.scrollY > 200) ? 'block' : 'none';
+        });
+        // Scroll vers le haut
+        document.getElementById('scroll-up').onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html> 
