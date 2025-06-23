@@ -30,7 +30,10 @@ header {
     top: 0;
     z-index: 1000; /* S'assure que le header reste au-dessus des autres éléments */
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 nav {
     display: flex; /* Layout flexible */
     justify-content: space-between; /* Espace entre logo et menu */
@@ -147,7 +150,21 @@ nav {
 .bouton-action:hover {
     background-color: #c0392b; /* Rouge plus foncé au survol */
 }
-
+.bouton-action-realisation {
+    display: block;               /* occupe toute la ligne */
+    width: 100%;                  /* prend toute la largeur disponible */
+    padding: 16px 32px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    text-align: center;           /* centre le texte à l’intérieur */
+    box-sizing: border-box;       /* inclut padding dans width */
+}
+.bouton-action-realisation:hover{
+        background-color: #c0392b; /* Rouge plus foncé au survol */
+}
 /* Section À Propos */
 .apropos {
     padding: 80px 16px; /* 80px = 5rem haut/bas, 16px gauche/droite */
@@ -328,6 +345,28 @@ footer .bas-pied {
     padding-top: 32px; /* 32px = 2rem */
     border-top: 1px solid #444;
 }
+.footer-navigation {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-navigation li {
+    margin-bottom: 8px;
+}
+
+.footer-navigation a {
+    color: #ffffff; /* Blanc ou autre couleur de texte */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.footer-navigation a:hover {
+    color: #e74c3c;
+    font-weight: 600;
+    transform: translateX(5px); /* Petit déplacement vers la droite */
+}
 
 
 /* Styles pour les images des sections */
@@ -468,6 +507,141 @@ footer .section-pied i {
     color: #666;
 }
 
+
+.section-onglets {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.onglets-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+
+/* Barre des onglets */
+.onglets-titres {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: -1px; /* colle l’onglet au contenu */
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+/* Boutons onglets */
+.onglet {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0; /* Arrondi haut */
+    padding: 20px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    top: 1px;
+}
+
+.onglet:hover {
+    background-color: #d5d5d5;
+}
+
+/* Onglet actif (ouvert) */
+.onglet.actif {
+    background-color: white;
+       color: #e74c3c;
+    border-color: #e74c3c;
+    z-index: 2;
+}
+
+/* Contenu des onglets */
+.onglet-contenu {
+    display: none;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+
+    margin: 0 auto;           /* Centre le bloc horizontalement */
+    max-width: 900px;         /* Limite la largeur pour éviter l'étalement */
+    box-sizing: border-box;   /* Inclut le padding dans la largeur */
+}
+.onglet-contenu {
+    display: none;
+    padding: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 900px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.onglet-contenu.actif {
+    display: block;
+}
+
+.icone-realisation {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.onglet-contenu h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.onglet-contenu ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.bouton-action-realisation {
+    display: block;
+    width: 100%;
+    padding: 16px 32px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.bouton-action-realisation:hover {
+    background-color: #c0392b;
+}
+
+.onglet-contenu.actif {
+    display: block;
+}
+.onglet-contenu .bouton {
+    display: block;
+    width: 50%;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+
 .bouton {
     display: inline-block;
     padding: 13px 24px;
@@ -480,6 +654,13 @@ footer .section-pied i {
 
 .bouton:hover {
     background-color: #c0392b;
+}
+.bouton-fle {
+    display: flex;
+    justify-content: space-around; /* Espace égal autour des boutons */
+    gap: 50px;                      /* Espacement horizontal entre les deux */
+    flex-wrap: wrap;               /* Permet le retour à la ligne si petit écran */
+    margin-top: 20px;
 }
 
 .banniere-nomission {
