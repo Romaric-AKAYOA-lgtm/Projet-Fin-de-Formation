@@ -898,7 +898,7 @@ footer .section-pied i {
     text-align: center;
     margin-bottom: 24px;
     font-size: 32px;
-    color: #e74c3c;
+    color: #191110;
 }
 
 .intro-don {
@@ -925,6 +925,14 @@ footer .section-pied i {
     font-weight: 500;
     color: #2c3e50;
 }
+/* Bordure rouge et ombre rouge au focus sur input et textarea */
+input:focus,
+textarea:focus {
+    outline: none; /* supprime le contour par défaut */
+    border: 2px solid #e74c3c; /* bordure rouge */
+    box-shadow: 0 0 8px 2px rgba(231, 76, 60, 0.7); /* ombre rouge */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 .groupe-formulaire input,
 .groupe-formulaire textarea {
@@ -946,12 +954,14 @@ footer .section-pied i {
     background-color: #e74c3c;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
+
 
 .bouton-don:hover {
     background-color: #c0392b;
@@ -1633,4 +1643,87 @@ button.bouton {
 
 button.bouton:hover {
   background-color: #c0392b;
+}
+
+/* Media Queries pour responsive */
+
+/* Écrans jusqu’à 768px (tablettes, petits écrans) */
+@media (max-width: 768px) {
+    /* Passage en colonne unique pour les grilles */
+    .grille-programmes {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+
+    /* Adaptation de la hauteur des cartes flip */
+    .flip-container {
+        height: auto;
+        min-height: 400px; /* ajustable */
+    }
+
+    /* Images dans les cartes adaptatives */
+    .image-mission {
+        height: 150px;
+    }
+
+    /* Ajustement du padding dans les cartes */
+    .carte-programme,
+    .front,
+    .back {
+        padding: 16px;
+    }
+
+    /* Taille du texte réduit */
+    .carte-programme h3,
+    .front h3,
+    .back h3 {
+        font-size: 1.1rem;
+    }
+
+    .carte-programme p,
+    .front p,
+    .back p {
+        font-size: 0.9rem;
+    }
+
+    /* Boutons plus larges et centrés */
+    button.bouton {
+        width: 80%;
+        margin: 10px auto 0;
+        font-size: 1rem;
+    }
+}
+
+/* Très petits écrans (mobiles < 480px) */
+@media (max-width: 480px) {
+    /* Réduire encore les paddings */
+    .carte-programme,
+    .front,
+    .back {
+        padding: 12px;
+    }
+
+    /* Image plus petite */
+    .image-mission {
+        height: 120px;
+    }
+
+    /* Texte un peu plus petit */
+    .carte-programme h3,
+    .front h3,
+    .back h3 {
+        font-size: 1rem;
+    }
+
+    .carte-programme p,
+    .front p,
+    .back p {
+        font-size: 0.85rem;
+    }
+
+    /* Bouton pleine largeur */
+    button.bouton {
+        width: 100%;
+        font-size: 0.95rem;
+    }
 }
