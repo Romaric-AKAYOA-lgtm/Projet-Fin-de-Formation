@@ -665,7 +665,7 @@ footer .section-pied i {
 
 .banniere-nomission {
     position: relative;
-    height: 60vh;
+    height: 100vh; /* Hauteur complète de l'écran */
     display: flex;
     align-items: center;
     justify-content: center;
