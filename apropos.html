@@ -19,17 +19,23 @@
             </ul>
         </nav>
     </header>
-    <!--banniere-realisations-->
-    <section class="banniere">
-        <div class="image-banniere">
-            <img src="images/prise-en-charge-hero.jpg" alt="Bannière Réalisations - KOSUNGA">
-        </div>
-        <div class="contenu-banniere">
-            <h1> <span>KOSUNGA</span></h1>
-            <p>Découvrez les actions concrètes menées par KOSUNGA.</p>
-     </div>
-    </section>
-    <section class="apropos">
+<!--banniere-realisations-->
+<section class="banniere">
+    <div class="image-banniere">
+        <img src="images/prise-en-charge-hero.jpg" alt="Bannière Réalisations - KOSUNGA">
+    </div>
+    <div class="contenu-banniere">
+        <h1><span>KOSUNGA</span></h1>
+        <p>Découvrez les actions concrètes menées par KOSUNGA.</p>
+
+        <!-- Flèche animée vers le bas -->
+        <a href="#apropos" class="scroll-down">
+            <i class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+</section>
+
+    <section class="apropos" id="apropos">
         <h2>À Propos de l'ONG </h2>
         <div class="conteneur-apropos">
             <div class="texte-apropos">
@@ -51,21 +57,21 @@
         <h2>Nos Missions</h2>
         <div class="grille-missions">
             <div class="carte-mission">
-                <img src="images/recueil-cas.jpg" alt="Recueil des cas" class="image-mission">
+                <img src="images/recueil_des_cas.jpg" alt="Recueil des cas" class="image-mission">
                 <i class="fas fa-hand-holding-heart"></i>
                 <h3>Recueil des Cas</h3>
                 <p>Recueillir les cas de violence basées sur le genre</p>
                 <a href="#mission1" class="bouton">Voir plus</a>
             </div>
             <div class="carte-mission">
-                <img src="images/orientation.jpg" alt="Orientation" class="image-mission">
+                <img src="images/orientation2.jpg" alt="Orientation" class="image-mission">
                 <i class="fas fa-directions"></i>
                 <h3>Orientation</h3>
                 <p>Orienter les victimes vers les services appropriés</p>
                 <a href="#mission2" class="bouton">Voir plus</a>
             </div>
             <div class="carte-mission">
-                <img src="images/prise-en-charge.jpg" alt="Prise en charge" class="image-mission">
+                <img src="images/prise_en_charge.jpeg" alt="Prise en charge" class="image-mission">
                 <i class="fas fa-users"></i>
                 <h3>Prise en Charge</h3>
                 <p>Prendre en charge des femmes et enfants orientés</p>
@@ -115,7 +121,7 @@
                           </div>
                           
                           <div class="section-image">
-                              <img src="images/recueil-cas-hero.jpg" alt="Recueil des cas">
+                              <img src="images/recueil_des_cas.jpg" alt="Recueil des cas">
                           </div>
                       </div>
                   </section>
@@ -172,7 +178,7 @@
                         </ul>
                     </div>
                     <div class="section-image">
-                        <img src="images/orientation-hero.jpg" alt="Orientation">
+                        <img src="images/orientation2.jpg" alt="Orientation">
                     </div>
                 </div>
             </section>
@@ -206,7 +212,7 @@
             </div>
             
             <div class="section-image">
-                <img src="images/prise-en-charge-hero.jpg" alt="Prise en charge">
+                <img src="images/prise_en_charge.jpeg" alt="Prise en charge">
             </div>
                     </div>
                 </section>
@@ -246,134 +252,151 @@
 
 
 
-
 <section class="missions">
   <h2>Notre Équipe</h2>
   <div class="grille-missions">
-    <!-- Une seule carte avec flip -->
+
+    <!-- Marie KABAMBA -->
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
-        <!-- Face avant -->
         <div class="front">
-          <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
+          <img src="images/femmes.png" alt="Marie KABAMBA" class="image-mission">
           <h3>Marie KABAMBA</h3>
           <p>Coordinatrice Générale</p>
           <div class="social-icons">
-                  <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="tel:+243812345678" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:akayoaromaric@gmail.com" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/242040312893?text=Bonjour%20Romaric%2C%20je%20souhaite%20échanger%20avec%20vous" 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+242040312893"><i class="fas fa-phone"></i></a>
+            <a href="mailto:marie.kabamba@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
           </div>
           <button class="bouton">Voir plus</button>
         </div>
-
-        <!-- Face arrière -->
         <div class="back">
           <h3>Marie KABAMBA</h3>
-          <p>
-            Engagée pour la défense des droits des femmes depuis plus de 10 ans.
-            Dirige l’ensemble des activités stratégiques de KOSUNGA.
-          </p>
+          <p>Engagée pour les droits des femmes depuis 10 ans. Supervise les activités stratégiques de l'ONG.</p>
           <button class="bouton">Retour</button>
         </div>
       </div>
     </div>
 
-
-    
-    <!-- Une seule carte avec flip -->
+    <!-- Jean MULUMBA -->
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
-        <!-- Face avant -->
         <div class="front">
-         <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
-          <h3>Marie KABAMBA</h3>
-          <p>Coordinatrice Générale</p>
+          <img src="images/homme.png" alt="Jean MULUMBA" class="image-mission">
+          <h3>Jean MULUMBA</h3>
+          <p>Responsable des Programmes</p>
           <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="tel:+243812345678" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:akayoaromaric@gmail.com" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/242040312893?text=Bonjour%20Romaric%2C%20je%20souhaite%20échanger%20avec%20vous" 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+243811234567"><i class="fas fa-phone"></i></a>
+            <a href="mailto:jean.mulumba@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
           </div>
           <button class="bouton">Voir plus</button>
         </div>
-
-        <!-- Face arrière -->
         <div class="back">
-          <h3>Marie KABAMBA</h3>
-          <p>
-            Engagée pour la défense des droits des femmes depuis plus de 10 ans.
-            Dirige l’ensemble des activités stratégiques de KOSUNGA.
-          </p>
+          <h3>Jean MULUMBA</h3>
+          <p>Coordonne les projets sur le terrain et gère leur planification stratégique avec les bailleurs.</p>
           <button class="bouton">Retour</button>
         </div>
       </div>
     </div>
 
-
-    
-    <!-- Une seule carte avec flip -->
+    <!-- Aline MUKONDA -->
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
-        <!-- Face avant -->
         <div class="front">
-        <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
-          <h3>Marie KABAMBA</h3>
-          <p>Coordinatrice Générale</p>
+          <img src="images/femmes.png" alt="Aline MUKONDA" class="image-mission">
+          <h3>Aline MUKONDA</h3>
+          <p>Chargée de Suivi & Évaluation</p>
           <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="tel:+243812345678" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:akayoaromaric@gmail.com" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/242040312893?text=Bonjour%20Romaric%2C%20je%20souhaite%20échanger%20avec%20vous" 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+242040312893"><i class="fas fa-phone"></i></a>
+            <a href="mailto:aline.mukonda@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
           </div>
           <button class="bouton">Voir plus</button>
         </div>
-
-        <!-- Face arrière -->
         <div class="back">
-          <h3>Marie KABAMBA</h3>
-          <p>
-            Engagée pour la défense des droits des femmes depuis plus de 10 ans.
-            Dirige l’ensemble des activités stratégiques de KOSUNGA.
-          </p>
+          <h3>Aline MUKONDA</h3>
+          <p>Assure le contrôle qualité des projets, collecte les indicateurs d’impact et évalue les performances.</p>
           <button class="bouton">Retour</button>
         </div>
       </div>
     </div>
 
+    <!-- David KASONGO -->
+    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
+      <div class="flipper">
+        <div class="front">
+          <img src="images/homme.png" alt="David KASONGO" class="image-mission">
+          <h3>David KASONGO</h3>
+          <p>Responsable Logistique</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+242062596201"><i class="fas fa-phone"></i></a>
+            <a href="mailto:david.kasongo@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <button class="bouton">Voir plus</button>
+        </div>
+        <div class="back">
+          <h3>David KASONGO</h3>
+          <p>Gère les équipements, fournitures, déplacements du personnel et toute la logistique de terrain.</p>
+          <button class="bouton">Retour</button>
+        </div>
+      </div>
+    </div>
 
-    
+    <!-- Grâce TSHIBOLA -->
+    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
+      <div class="flipper">
+        <div class="front">
+          <img src="images/femmes.png" alt="Grâce TSHIBOLA" class="image-mission">
+          <h3>Grâce TSHIBOLA</h3>
+          <p>Chargée de Communication</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+243818888888"><i class="fas fa-phone"></i></a>
+            <a href="mailto:grace.tshibola@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <button class="bouton">Voir plus</button>
+        </div>
+        <div class="back">
+          <h3>Grâce TSHIBOLA</h3>
+          <p>Gère les relations publiques, les publications sur les réseaux sociaux et les campagnes médias.</p>
+          <button class="bouton">Retour</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Patrick LUBUNGA -->
+    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
+      <div class="flipper">
+        <div class="front">
+          <img src="images/homme.png" alt="Patrick LUBUNGA" class="image-mission">
+          <h3>Patrick LUBUNGA</h3>
+          <p>Comptable</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="tel:+243817777777"><i class="fas fa-phone"></i></a>
+            <a href="mailto:patrick.lubunga@kosunga.org"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <button class="bouton">Voir plus</button>
+        </div>
+        <div class="back">
+          <h3>Patrick LUBUNGA</h3>
+          <p>Assure la gestion financière, la transparence budgétaire et la comptabilité générale de l’ONG.</p>
+          <button class="bouton">Retour</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <section class="missions">
   <h2>Nos Sites & Antennes</h2>
@@ -383,7 +406,7 @@
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
         <div class="front">
-         <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
+         <img src="images/maison1.jpeg" alt="Site Lubumbashi" class="image-mission">
           <h3>Site de Kinshasa</h3>
           <p>Siège principal</p>
           <div class="social-icons">
@@ -418,7 +441,7 @@
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
         <div class="front">
-          <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
+          <img src="images/mason2.jpeg" alt="Site Lubumbashi" class="image-mission">
           <h3>Antenne de Lubumbashi</h3>
           <p>Sud de la RDC</p>
           <div class="social-icons">
@@ -454,7 +477,7 @@
     <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
       <div class="flipper">
         <div class="front">
-           <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
+           <img src="images/maison3.jpeg" alt="Site Lubumbashi" class="image-mission">
           <h3>Site de Kinshasa</h3>
           <p>Siège principal</p>
           <div class="social-icons">
@@ -485,109 +508,7 @@
       </div>
     </div>
 
-    <!-- Carte Site 2 -->
-    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
-      <div class="flipper">
-        <div class="front">
-         <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
-          <h3>Antenne de Lubumbashi</h3>
-          <p>Sud de la RDC</p>
-          <div class="social-icons">
-            <a href="https://maps.google.com?q=Lubumbashi" target="_blank" title="Voir sur la carte">
-              <i class="fas fa-map-marker-alt"></i>
-            </a>
-            <a href="tel:+243821234567" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:lubumbashi@kosunga.org" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/243821234567?text=Bonjour%2C%20j'aimerais%20en%20savoir%20plus%20sur%20l'antenne%20de%20Lubumbashi." 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-          <button class="bouton">Voir plus</button>
-        </div>
-        <div class="back">
-          <h3>Antenne de Lubumbashi</h3>
-          <p>
-            L’antenne régionale de KOSUNGA au Katanga. Intervention de terrain, appui psychologique, 
-            sensibilisation communautaire et collaboration avec les services sociaux locaux.
-          </p>
-          <button class="bouton">Retour</button>
-        </div>
-      </div>
-    </div>
-        <!-- Carte Site 1 -->
-    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
-      <div class="flipper">
-        <div class="front">
-          <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
-          <h3>Site de Kinshasa</h3>
-          <p>Siège principal</p>
-          <div class="social-icons">
-            <a href="https://maps.google.com?q=Kinshasa" target="_blank" title="Voir sur la carte">
-              <i class="fas fa-map-marker-alt"></i>
-            </a>
-            <a href="tel:+243820000001" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:contact@kosunga.org" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/243820000001?text=Bonjour%2C%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20le%20site%20de%20Kinshasa." 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-          <button class="bouton">Voir plus</button>
-        </div>
-        <div class="back">
-          <h3>Site de Kinshasa</h3>
-          <p>
-            Le siège principal de KOSUNGA. Centre de coordination, d’accueil et d’orientation des victimes, 
-            avec un bureau d’écoute, une cellule juridique et un espace d’hébergement temporaire.
-          </p>
-          <button class="bouton">Retour</button>
-        </div>
-      </div>
-    </div>
 
-    <!-- Carte Site 2 -->
-    <div class="flip-container carte-mission" onclick="this.classList.toggle('flipped')">
-      <div class="flipper">
-        <div class="front">
-          <img src="images/orientation-hero.jpg" alt="Site Lubumbashi" class="image-mission">
-          <h3>Antenne de Lubumbashi</h3>
-          <p>Sud de la RDC</p>
-          <div class="social-icons">
-            <a href="https://maps.google.com?q=Lubumbashi" target="_blank" title="Voir sur la carte">
-              <i class="fas fa-map-marker-alt"></i>
-            </a>
-            <a href="tel:+243821234567" title="Appeler">
-              <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:lubumbashi@kosunga.org" title="Envoyer un mail">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://wa.me/243821234567?text=Bonjour%2C%20j'aimerais%20en%20savoir%20plus%20sur%20l'antenne%20de%20Lubumbashi." 
-               target="_blank" title="Contacter sur WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-          <button class="bouton">Voir plus</button>
-        </div>
-        <div class="back">
-          <h3>Antenne de Lubumbashi</h3>
-          <p>
-            L’antenne régionale de KOSUNGA au Katanga. Intervention de terrain, appui psychologique, 
-            sensibilisation communautaire et collaboration avec les services sociaux locaux.
-          </p>
-          <button class="bouton">Retour</button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -731,6 +652,20 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
 
 </body>
 </html> 

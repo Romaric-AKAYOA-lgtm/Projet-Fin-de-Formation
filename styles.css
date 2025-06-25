@@ -16,6 +16,7 @@ Les variables définies dans :root sont accessibles partout dans le document*/
 }
 
 body {
+      scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6; /* Espacement entre les lignes */
     color: #333; /* Couleur du texte principal */
@@ -123,7 +124,7 @@ nav {
 
 .contenu-banniere h1 {
     font-size: 48px; /* 48px = 3rem */
-    margin-bottom: 16px; /* 16px = 1rem */
+
 }
 
 .contenu-banniere h1 span{
@@ -134,7 +135,7 @@ nav {
 
 .contenu-banniere p {
     font-size: 19px; /* 19px = 1.2rem */
-    margin-bottom: 32px; /* 32px = 2rem */
+    margin-bottom: 20px; /* 32px = 2rem */
 }
 
 .bouton-action {
@@ -1726,4 +1727,26 @@ button.bouton:hover {
         width: 100%;
         font-size: 0.95rem;
     }
+}.scroll-down {
+  display: inline-block;
+  margin: auto;
+  font-size: 60px; /* Taille augmentée */
+  color: #e74c3c;
+  animation: bounce 1.5s infinite;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.scroll-down:hover {
+  color: #c0392b;
+  transform: scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
 }

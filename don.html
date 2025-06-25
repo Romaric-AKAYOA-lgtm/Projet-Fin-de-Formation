@@ -22,15 +22,19 @@
 <!-- banniere-don-->
     <section class=" banniere">
         <div class="image-banniere">
-            <img src="images/recueil-cas-hero.jpg" alt="Bannière Don - KOSUNGA">
+            <img src="images/faire_dan.jpg" alt="Bannière Don - KOSUNGA">
         </div>
         <div class="contenu-banniere">
             <h1><span>Faire un Don</span></h1>
             <p>Votre générosité permet à KOSUNGA de poursuivre ses actions pour la protection des femmes et enfants vulnérables.</p>
+                    <!-- Flèche animée vers le bas -->
+        <a href="#don" class="scroll-down">
+            <i class="fas fa-arrow-down"></i>
+        </a>
         </div>
     </section>
 
-    <section class="don-section">
+    <section class="don-section" id="don">
         <h2>Soutenez nos actions</h2>
         <p class="intro-don">Chaque don, même le plus modeste, contribue à changer des vies. Merci pour votre soutien !</p>
         <form class="formulaire-don">
@@ -199,6 +203,20 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+</script>
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
 </script>
 
 </body>
