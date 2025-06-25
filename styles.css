@@ -117,6 +117,8 @@ nav {
 }
 
 .contenu-banniere {
+      margin: auto 30px;
+    align-items: center;
     position: relative;
     z-index: 1; /* Place le contenu au-dessus de l'image */
     max-width: 800px;
@@ -124,12 +126,13 @@ nav {
 
 .contenu-banniere h1 {
     font-size: 48px; /* 48px = 3rem */
-
+  margin: auto 30px;
 }
 
 .contenu-banniere h1 span{
     color: #e74c3c;
     font-size: 60px;
+      margin: auto 30px;
 }
 
 
