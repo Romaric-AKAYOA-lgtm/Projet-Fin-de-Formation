@@ -140,13 +140,18 @@ nav {
     padding: 0 16px; /* 16px = 1rem */
     overflow: hidden; /* Cache le débordement */
 }
+.contenu-banniere p {
+    /* Par défaut, pas de marge */
+    margin-left: 0;
+    margin-right: 0;
+}
 
-/* Media Query pour les écrans < 480px */
-@media (max-width: 480px) {
+/* Media Query pour les écrans <= 320px (comme iPhone SE en portrait) */
+@media (max-width: 320px) {
     .contenu-banniere p {
-        margin-left: 10px;   /* Ajuste la valeur selon tes préférences */
-        margin-right: 10px;  /* Ajuste la valeur selon tes préférences */
-    }
+padding: 20px auto;
+        margin: 20px auto;
+}
 }
 
 .image-banniere {
