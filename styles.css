@@ -181,6 +181,7 @@ nav {
 }
 
 .contenu-banniere h1 span{
+    text-align: center;
     color: #e74c3c;
     font-size: 60px;
       margin: auto 30px;
@@ -188,8 +189,10 @@ nav {
 
 
 .contenu-banniere p {
+    text-align: center;
     font-size: 19px; /* 19px = 1.2rem */
     margin-bottom: 20px; /* 32px = 2rem */
+    margin: 30px auto;
 }
 
 .bouton-action {
@@ -768,8 +771,10 @@ footer .section-pied i {
 }
 
 .banniere-nomission .contenu-banniere p {
+    text-align: center;
     font-size: 19px;
     margin-bottom: 32px;
+    margin: 20px auto;
 }
 
 /* =====================
@@ -1449,6 +1454,7 @@ textarea:focus {
 .contenu-banniere {
     position: relative;
     z-index: 1;
+    margin: 10px auto;
 }
 
 .contenu-mission {
@@ -1700,10 +1706,20 @@ button.bouton:hover {
   background-color: #c0392b;
 }
 
+
+/* Media Query pour les petits écrans */
+@media (max-width: 768px) {
+    .contenu-banniere p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 /* Media Queries pour responsive */
 
 /* Écrans jusqu’à 768px (tablettes, petits écrans) */
 @media (max-width: 768px) {
+
     /* Passage en colonne unique pour les grilles */
     .grille-programmes {
         grid-template-columns: 1fr !important;
@@ -1751,6 +1767,9 @@ button.bouton:hover {
 
 /* Très petits écrans (mobiles < 480px) */
 @media (max-width: 480px) {
+    .contenu-banniere p{
+        margin: 20px auto;
+    }
     /* Réduire encore les paddings */
     .carte-programme,
     .front,
