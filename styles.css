@@ -141,6 +141,14 @@ nav {
     overflow: hidden; /* Cache le débordement */
 }
 
+/* Media Query pour les écrans < 480px */
+@media (max-width: 480px) {
+    .contenu-banniere p {
+        margin-left: 10px;   /* Ajuste la valeur selon tes préférences */
+        margin-right: 10px;  /* Ajuste la valeur selon tes préférences */
+    }
+}
+
 .image-banniere {
     position: absolute;
     top: 0;
